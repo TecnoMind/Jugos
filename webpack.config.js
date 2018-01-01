@@ -1,19 +1,17 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin'); 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin'); 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 var VersionFile = require('webpack-version-file-plugin');
 const webpack = require('webpack');
 var outputFilePath = "/generated";
-const extractPlugin = new ExtractTextPlugin(
-	{ filename: outputFilePath + 'app.css'});
+const extractPlugin = new ExtractTextPlugin( 	 	
+	{ filename: outputFilePath + '/app.css'});
 
 module.exports={
    context: __dirname,
     
-    entry: {
-    	'app':"./src/app.js"
-    },
+    entry: "./src/app.js",
 
     output:{
         path: path.resolve(__dirname, outputFilePath),
@@ -28,14 +26,17 @@ module.exports={
         		include: /src/,
         		exclude: /node_modules/,
       		},
-      		{
-      			 test: /\.html$/, 
-      			 use: ['html-loader'] 
-      		},
+          {
+            test: /\.(html)$/,
+            use: {
+              loader: 'html-loader'
+            }
+          },
+
       		{
   				test: /\.scss$/,
- 				include: [path.resolve(__dirname, 'src','assets','scss')],
-				use: extractPlugin.extract({
+ 		   		include: [path.resolve(__dirname, 'src','assets','scss')],
+			   	use: extractPlugin.extract({
 			                use: [{
 			                    loader: "css-loader"
 			                }, {
@@ -73,8 +74,7 @@ module.exports={
     },
 
     plugins: [
-    	new CleanWebpackPlugin([outputFilePath]),
-    	new HtmlWebpackPlugin({template: __dirname + '/src/index.html'}),
+    	new HtmlWebpackPlugin({template:'./src/index.html'}),
     	extractPlugin,
     	 new VersionFile({
 	          packageFile: __dirname + '/package.json',
