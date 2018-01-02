@@ -9,22 +9,30 @@ const extractPlugin = new ExtractTextPlugin(
 	{ filename: outputFilePath + '/app.css'});
 
 module.exports={
-   context: __dirname,
+   context: path.resolve(__dirname, 'src'),
     
-    entry: "./src/app.js",
+   entry: './app.js',
 
     output:{
         path: path.resolve(__dirname, outputFilePath),
          filename: '[name].[hash].js',
-        publicPath:  "/Jugui-Tono"
+         publicPath:  "/Jugui-Tono"
     },
 
      module: {
     	rules: [
       		{
         		test: /\.js$/,
-        		include: /src/,
+        		include: path.resolve(__dirname, 'src'),
         		exclude: /node_modules/,
+            use: [{
+              loader: 'babel-loader',
+              options: {
+                presets: [
+                  ['es2015', { modules: false }]
+                ]
+              }
+            }]
       		},
           {
             test: /\.(html)$/,
@@ -74,7 +82,7 @@ module.exports={
     },
 
     plugins: [
-    	new HtmlWebpackPlugin({template:'./src/index.html'}),
+    	new HtmlWebpackPlugin({template:'./index.html'}),
     	extractPlugin,
     	 new VersionFile({
 	          packageFile: __dirname + '/package.json',
