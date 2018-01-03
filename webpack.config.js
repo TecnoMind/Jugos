@@ -1,58 +1,47 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-var VersionFile = require('webpack-version-file-plugin');
-const webpack = require('webpack');
-var outputFilePath = "/generated";
-const extractPlugin = new ExtractTextPlugin( 	 	
-	{ filename: outputFilePath + '/app.css'});
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const extractPlugin = new ExtractTextPlugin(
+	{ filename: '[name].[hash].css'});
 
 module.exports={
-   context: path.resolve(__dirname, 'src'),
-    
-   entry: './app.js',
+
+   entry: './src/app.js',
 
     output:{
-        path: path.resolve(__dirname, outputFilePath),
-         filename: '[name].[hash].js',
-         publicPath:  "/Jugui-Tono"
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].[hash].js'
     },
 
      module: {
     	rules: [
       		{
-        		test: /\.js$/,
-        		include: path.resolve(__dirname, 'src'),
-        		exclude: /node_modules/,
-            use: [{
-              loader: 'babel-loader',
-              options: {
-                presets: [
-                  ['es2015', { modules: false }]
-                ]
-              }
-            }]
+				test: /\.js$/,
+				include: path.resolve(__dirname, 'src'),
+				exclude: /node_modules/,
+				use: [{
+				  loader: 'babel-loader',
+				  options: {
+					presets: [
+					  ['es2015']
+					]
+				  }
+				}]
       		},
-          {
-            test: /\.(html)$/,
-            use: {
-              loader: 'html-loader'
-            }
-          },
+            {
+				test: /\.(html)$/,
+				use: {
+				  loader: 'html-loader'
+				}
+            },
 
       		{
   				test: /\.scss$/,
- 		   		include: [path.resolve(__dirname, 'src','assets','scss')],
+ 		   		include: [path.resolve(__dirname, 'src','css')],
 			   	use: extractPlugin.extract({
-			                use: [{
-			                    loader: "css-loader"
-			                }, {
-			                    loader: "sass-loader"
-			                }],
-			                // use style-loader in development
-			                fallback: "style-loader"
-         	   })
+			                use: ["css-loader","sass-loader"]
+         	    })
     						
 			},
 			{ 
@@ -66,39 +55,32 @@ module.exports={
 					  loader: 'file-loader', 
 					  options: { 
 					  		name: '[name].[ext]', 
-					  		outputPath: __dirname + outputFilePath 
+					  		outputPath: 'img/'
+						    //publicPath: 'img/'
 					    } 
 					} 
 				] 
-			}
+			},
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            }
    		]
   	},
-
-  	resolve: {
-        extensions: ['*', '.js','.html', '.css'],
-        alias: {
-            bootstrap_css: __dirname + '/node_modules/bootstrap/dist/css/bootstrap.min.css'
+    devServer: {
+        inline: true,
+        port: 8484,
+        historyApiFallback: {
+            index: '/pv-app/'
         }
     },
 
     plugins: [
-    	new HtmlWebpackPlugin({template:'./index.html'}),
+    	new HtmlWebpackPlugin({
+			template: __dirname + '/src/index.html'
+    	}),
     	extractPlugin,
-    	 new VersionFile({
-	          packageFile: __dirname + '/package.json',
-	          template: __dirname + '/node_modules/webpack-version-file-plugin/version.ejs',
-	          outputFile: __dirname + outputFilePath + '/version.json'
-   		})
-    	
+		new CleanWebpackPlugin(['dist'])
   	],
 
-    devServer: {
-  		contentBase: path.resolve(__dirname, outputFilePath + "/assets/img"),
-  		compress: true,
-  		port: 9090,
-  		stats: 'errors-only',
-  		open: true
-	},
-
-	devtool: 'inline-source-map'
 };
