@@ -1,0 +1,27 @@
+/* "Footer" */
+footer{
+  text-align: center;
+}
+
+/* Texto lateral izquierdo */
+footer .texto-footer{
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+/* Iconos centrales */
+footer .iconos{
+  list-style: none;
+}
+
+/* Lista de iconos centrales */
+footer .iconos li{
+  display: inline-block;
+  padding-top: 15px;
+  padding-right: 25px;
+}
+
+/* Botón de regreso lateral derecho*/
+footer .fa-arrow-circle-o-up{
+  margin-top: 5px;
+}

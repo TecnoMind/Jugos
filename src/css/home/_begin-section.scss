@@ -1,0 +1,42 @@
+/***** Contenido Inicio *****/
+
+/* Contenedor del inicio */
+.contenido-inicio {
+    height: 100vh;
+    background: url(../../img/home.jpg) center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+/* Efecto de fondo negro*/
+.cubridor-negro{
+    background: rgba(74, 66, 66, 0.19);
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Texto del contenido de inicio */
+.contenido-inicio .texto-inicio {
+    margin-top: 160px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Encabezado del contenido de inicio */
+.contenido-inicio .texto-inicio h1 {
+    color: #fff;
+}
+
+/* Texto del contenido de inicio */
+.contenido-inicio .descripcion-inicio {
+    margin: 30px 0 10px 0;
+}
+
+/* Texto secundario del contenido de inicio */
+.contenido-inicio .descripcion-inicio .texto-inicio-secundario {
+
+}
+
+/*****************************/

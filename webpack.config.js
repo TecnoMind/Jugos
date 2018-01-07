@@ -31,6 +31,7 @@ module.exports={
       		},
             {
 				test: /\.(html)$/,
+                include: path.resolve(__dirname, 'src'),
 				use: {
 				  loader: 'html-loader'
 				}
