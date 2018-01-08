@@ -41,7 +41,19 @@ module.exports={
   				test: /\.scss$/,
  		   		include: [path.resolve(__dirname, 'src','css')],
 			   	use: extractPlugin.extract({
-			                use: ["css-loader","sass-loader"]
+			                use: [
+			                	{
+			                		loader:"css-loader",
+									options: {
+                                //        url: false,
+                                        minimize: true,
+                                        sourceMap: true
+									}
+								},
+								{
+									loader:"sass-loader"
+								}
+							]
          	    })
     						
 			},

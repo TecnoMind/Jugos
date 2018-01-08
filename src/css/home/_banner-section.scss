@@ -2,7 +2,7 @@
 
 /* Contenedor "Section" del extra*/
 #extra{
-  background: url(../../img/banner.jpg) center fixed;
+  background: require('../../img/banner.jpg') center fixed;
   background-size: cover;
   height: 30vh;
 }
