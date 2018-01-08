@@ -3,7 +3,7 @@
 /* Contenedor del inicio */
 .contenido-inicio {
     height: 100vh;
-    background: require('../../img/home.jpg') center fixed;
+    background: url('../img/home.jpg') center fixed;
     background-size: cover;
     position: relative;
 }
