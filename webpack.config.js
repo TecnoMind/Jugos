@@ -45,7 +45,6 @@ module.exports={
 			                	{
 			                		loader:"css-loader",
 									options: {
-                                //        url: false,
                                         minimize: true,
                                         sourceMap: true
 									}
@@ -65,13 +64,18 @@ module.exports={
 				test: /\.(jpg|png|gif|svg)$/, 
 				use: [ 
 					{ 
-					  loader: 'file-loader', 
+					/*  loader: 'file-loader',
 					  options: { 
 					  		name: '[name].[ext]', 
 					  		outputPath: 'img/'
 						    //publicPath: 'img/'
-					    } 
-					} 
+					    } */
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8000, // Convert images < 8kb to base64 strings
+                            name: 'img/[hash]-[name].[ext]',
+                        }
+                    }
 				] 
 			},
             {
