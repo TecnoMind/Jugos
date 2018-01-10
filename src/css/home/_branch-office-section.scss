@@ -1,31 +1,44 @@
 /***** Sección Sucursales *****/
 
 /* Primer renglon de la seccion sucursales */
-.titulo-sucursales{
-  margin: 75px 0 0 0;
-  text-align: center;
+
+.titulo-sucursales {
+    margin: 75px 0 0 0;
+    text-align: center;
 }
 
 /* Segundo renglon de la seccion sucursales*/
-.seccion-sucursales{
-  margin-top: 40px
+
+.seccion-sucursales {
+    margin-top: 40px
 }
 
 /* Imagenes de la sección sucursales */
-.seccion-sucursales img{
-  width: 300px;
-  height: 200px;
-  margin: 30px 30px 10px 30px;
+
+.seccion-sucursales img {
+    width: 300px;
+    height: 200px;
+    margin: 30px 30px 10px 30px;
+}
+
+.seccion-sucursales img:hover {
+    width: 300px;
+    height: 200px;
+    margin: 30px 30px 10px 30px;
 }
 
 /* Encabezados imagenes */
-.seccion-sucursales h4{
-  text-align: center;
+
+.seccion-sucursales h4 {
+    text-align: center;
 }
 
 /* Texto debajo de las imagenes */
-.texto-sucursales{
-  margin: 20px 0px;
-  text-align: center;
-  margin-bottom: 75px;
+
+.texto-sucursales {
+    margin: 20px 0px;
+    text-align: center;
+    margin-bottom: 75px;
 }
+
+/*****************************/
