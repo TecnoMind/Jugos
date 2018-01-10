@@ -1,22 +1,32 @@
+/***** Sección Sucursales *****/
+
 /* "Section" de contactanos */
-#contactanos{
-  background: #f7f7f7;
+
+#contactanos {
+    background: #f7f7f7;
 }
 
 /* Div auxiliar */
-.contactanos{
-  padding: 0px 100px;
+
+.contactanos {
+    padding: 0px 100px;
 }
 
 /* Encabezado de la seccion */
-.contactanos h2{
-  text-align: center;
-  padding: 50px 0;
+
+.contactanos h2 {
+    text-align: center;
+    padding: 50px 0;
 }
 
 /* Renglon de la direccion y horario */
-.contactanos .col-sm-12{
-  padding-bottom: 30px;
+
+.contactanos .col-sm-12 {
+    padding-bottom: 30px;
 }
 
+/* Imagen mapa */
+.mapa{
+    width: 100%;
+}
 /*****************************/
