@@ -1,39 +1,52 @@
-/*********** Navbar ***********/
-
 /* Contenedor navbar */
-.navbar{
-  margin-bottom: 0;
-  padding-top: 10px;
-  font-family: 'Josefin Sans', sans-serif;
-  background: rgba(0, 0, 0, 0.13) !important;
-  transition: 0.5s;
+
+.navbar {
+    margin-bottom: 0;
+    padding-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    background: rgba(0, 0, 0, 0.13) !important;
+    transition: 0.5s;
 }
 
 /* Navbar efecto secundario */
-.dark{
-  padding: 0px 0px 0px 0px;
-  background: #88c94d !important;
-  transition: 0.5s;
+
+.dark {
+    padding: 0px 0px 0px 0px;
+    background: #88c94d !important;
+    transition: 0.5s;
 }
 
 /* Navbar-brand (icono) */
-.logo{
-  height: 50px;
-  width: 50px;
-  border-radius: 1rem;
+
+.logo {
+    height: 60px;
+    width: 70px;
+    border-radius: 1rem;
 }
 
 /* Navbar enlaces */
-.navbar ul li a{
-  margin: 10px 8px 0px 0px;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: white !important;
+
+.navbar ul li a {
+    width: 90px;
+    border-radius: 10px;
+    padding: 8px 10px 8px 10px;
+    text-align: center;
+    color: white !important;
 }
 
-/* Pseudoclase en los enlaces del navbar */
-.navbar ul li a:hover{
-  color: #f27036 !important
+/* Pseudoclases en los enlaces del navbar */
+
+/* Efecto al pasar encima del link */
+
+.navbar ul li a:hover {
+    color: #f5ff00 !important;
+    background: black !important;
 }
+
+/* Clase para estilizar el "a" activo */
+
+.active {
+    background: #009C99;
+}
+
 /*****************************/

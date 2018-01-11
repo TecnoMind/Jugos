@@ -1,31 +1,73 @@
-#nosotros{
-  background: #FFFAEA;
+/***** Contenido Nosotros *****/
+
+/* Section nosotros fuera del container */
+
+#nosotros {
+    background: #FFFAEA;
 }
 
 /* Contenedor de nosotros*/
-.nosotros{
-  padding-top: 75px;
-  padding-bottom: 75px;
+
+.nosotros {
+    padding-top: 75px;
+    padding-bottom: 75px;
 }
 
 /* Contenedor del texto nosotros*/
-.texto-nosotros{
-  padding: 20px;
-  text-align: center;
+
+.texto-nosotros {
+    padding: 20px;
+    text-align: center;
 }
 
 /* Parrafo del texto nosotros */
-.texto-nosotros p{
-  margin-top: 40px;
+
+.texto-nosotros p {
+    margin-top: 40px;
 }
 
 /* Contenedor de iconos nosotros */
-.nosotros .figuras{
-  padding-top: 60px;
-  text-align: center;
+
+.nosotros .figuras {
+    padding-top: 60px;
+    text-align: center;
+
+}
+
+ /* Fondo blanco en los 3 iconos */
+.renglon-nosotros{
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px #000000;
+    transition: .3s;
+}
+
+ /* Efecto contorno al fondo blanco en los 3 iconos */
+.renglon-nosotros:hover{
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px #009C99;
+    transition: .3s;
 }
 
 /* Iconos de seccion nosotros */
-.nosotros .figuras i{
-  padding-bottom: 30px;
+
+.nosotros .figuras .iconos {
+    padding-bottom: 30px;
+    transition: .2s;
 }
+
+ /* Efectos a iconos */
+.nosotros .figuras .fa-coffee:hover{
+    color: #8B4513;
+    transition: .2s;
+}
+.nosotros .figuras .fa-cutlery:hover{
+    color: gray;
+    transition: .2s;
+}
+.nosotros .figuras .fa-star:hover{
+    color: yellow;
+    transition: .2s;
+}
+/*****************************/

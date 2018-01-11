@@ -1,26 +1,30 @@
 /***** Sección Intermedia *****/
 
 /* Contenedor "Section" del extra*/
-#extra{
-  background: url('../img/banner.jpg') center fixed;
-  background-size: cover;
-  height: 30vh;
+
+#extra {
+    background: url("/src/img/banner.jpg") center fixed;
+    background-size: cover;
+    height: 30vh;
 }
 
 /* Renglon sección intermedia */
-.seccion-intermedia{
-  text-align: center;
+
+.seccion-intermedia {
+    text-align: center;
 }
 
 /* Parrafo de la sección intermedia */
-.seccion-intermedia p{
-  color: white;
-  font-size: 50px;
+
+.seccion-intermedia p {
+    color: white;
+    font-size: 50px;
 }
 
 /* Texto del parrafo sección intermedia */
-.texto-seccion-intermedia{
-  padding: 80px 0px;
+
+.texto-seccion-intermedia {
+    padding: 80px 0px;
 }
 
 /*****************************/

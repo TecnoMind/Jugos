@@ -1,27 +1,47 @@
+/***** Sección Footer *****/
+
 /* "Footer" */
-footer{
-  text-align: center;
+
+footer {
+    text-align: center;
+    background: #FFFAEA;
 }
 
 /* Texto lateral izquierdo */
-footer .texto-footer{
-  margin-top: 20px;
-  font-size: 12px;
+
+footer .texto-footer {
+    margin-top: 20px;
+    font-size: 12px;
 }
 
 /* Iconos centrales */
-footer .iconos{
-  list-style: none;
+
+footer .iconos {
+    list-style: none;
 }
 
 /* Lista de iconos centrales */
-footer .iconos li{
-  display: inline-block;
-  padding-top: 15px;
-  padding-right: 25px;
+
+footer .iconos li {
+    display: inline-block;
+    padding-top: 15px;
+    padding-right: 25px;
 }
 
 /* Botón de regreso lateral derecho*/
-footer .fa-arrow-circle-o-up{
-  margin-top: 5px;
+
+footer .fa-arrow-circle-o-up {
+    margin-top: 5px;
+}
+
+/* Cambiando color a los iconos */
+
+.fa-facebook-square {
+    color: #3b5998;
+}
+
+/* Cambiando color a los iconos */
+
+.fa-instagram {
+    color: #517fa4;
 }
