@@ -8,5 +8,5 @@ import home from './js/home';
 import menu from './js/menu';
 import routing from './app.config';
 
-angular.module('app', [uirouter,home,menu])
+angular.module('app', [uirouter,menu,home])
     .config(routing);
