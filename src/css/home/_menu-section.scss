@@ -1,0 +1,30 @@
+/***** Sección Menú *****/
+
+/***** Sección de bienvenida *****/
+.centrado{
+  position: relative;
+  background: gray;
+  height: 35vh;
+}
+
+.centrado .titulo{
+  position: absolute;
+  text-align: center;
+  left: 35%;
+  top: 40%;
+}
+
+.centrado .botonsito{
+  position: absolute;
+  left: 45%;
+  top: 70%;
+  width: 100px;
+}
+
+/*****************************/
+
+/***** Contenido "Jugos" *****/
+
+.titulo{
+  text-align: center;
+}
