@@ -7,7 +7,7 @@ import header from '../commons/directive/src/header';
 import footer from '../commons/directive/src/footer';
 import menu from './directive/src/menu-section';
 
-export default angular.module('app.home', [uirouter, header, footer, menu])
+export default angular.module('app.menu', [uirouter, header, footer, menu])
     .config(routing)
     .controller('MenuController', MenuController)
     .name;
