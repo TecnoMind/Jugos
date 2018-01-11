@@ -1,4 +1,5 @@
 import './css/main.scss';
+import './css/main-menu.scss';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import angular from 'angular';
@@ -7,5 +8,5 @@ import home from './js/home';
 import menu from './js/menu';
 import routing from './app.config';
 
-angular.module('app', [uirouter,menu])
+angular.module('app', [uirouter,home,menu])
     .config(routing);
