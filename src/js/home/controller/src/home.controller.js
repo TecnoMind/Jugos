@@ -6,6 +6,7 @@ export default class HomeController {
     }
 
     changeName() {
-
+        return 'edgar';
     }
+
 }

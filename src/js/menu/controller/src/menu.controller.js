@@ -5,7 +5,5 @@ export default class MenuController {
 
     }
 
-    changeName() {
 
-    }
 }
