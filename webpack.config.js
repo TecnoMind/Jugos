@@ -57,19 +57,13 @@ module.exports={
     						
 			},
 			{ 
-				test: /\.(woff|woff2|eot|ttf|otf)$/, 
+				test: /\.(jpe|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
 				use: ['file-loader'] 
 			},
 			{ 
-				test: /\.(jpg|png|gif|svg)$/, 
+				test: /\.(jpg|png|gif)$/,
 				use: [ 
-					{ 
-					/*  loader: 'file-loader',
-					  options: { 
-					  		name: '[name].[ext]', 
-					  		outputPath: 'img/'
-						    //publicPath: 'img/'
-					    } */
+					{
                         loader: 'url-loader',
                         options: {
                             limit: 8000, // Convert images < 8kb to base64 strings

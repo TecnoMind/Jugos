@@ -1,5 +1,5 @@
 import './css/main.scss';
-import './css/main-menu.scss';
+import './css/menu/main-menu.scss';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import angular from 'angular';
