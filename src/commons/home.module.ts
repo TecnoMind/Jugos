@@ -17,7 +17,7 @@ import {routing} from "./home.routes";
         NgbTypeaheadModule.forRoot(),
         RouterModule.forRoot(
             routing,
-            { enableTracing: true,useHash: true }, // <-- debugging purposes only
+            {useHash: true }, // <-- debugging purposes only
 
         )
     ],

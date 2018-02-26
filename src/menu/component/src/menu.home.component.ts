@@ -1,4 +1,6 @@
 import {Component} from "@angular/core";
+import {Http} from "@angular/http";
+
 
 @Component({
     selector: 'menu',
@@ -6,4 +8,11 @@ import {Component} from "@angular/core";
 })
 export class MenuHomeComponent {
 
+    private data : object;
+
+    constructor(private http:Http) {
+        this.http.get('data/menu.json')
+            .subscribe(res => this.data = res.json());
+
+    }
 }
